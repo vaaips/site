@@ -7,14 +7,14 @@ html(lang="en")
     title Vaaip - Software Design, Develop & Maintain Studio
     link(rel="stylesheet", href="app.sass")
   body
-    header.wow.fadeIn
+    header.wow.fadeIn.slow
       nav.navbar.navbar-expand-lg.navbar-light.container
         a.navbar-brand(href='#')
           img(src="assets/logo.png", alt="Vaaip logo")
         button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbar' aria-controls='navbar' aria-expanded='false' aria-label='Toggle navigation')
           span.navbar-toggler-icon
         #navbar.collapse.navbar-collapse
-          ul.navbar-nav.ml-auto
+          ul.navbar-nav.ml-auto.wow.fadeIn.slow(data-wow-delay="4s")
             li.nav-item.active
               a.nav-link(href='#') Home
             li.nav-item
@@ -26,14 +26,14 @@ html(lang="en")
             li.nav-item
               a.nav-link(href='#') Contact
               
-    section#home.wow.fadeIn
+    section#home.wow.fadeIn.slow
       div.container
-        h1.wow.fadeIn(data-wow-delay="1s")
+        h1.wow.fadeIn.slow(data-wow-delay="1s")
           | Software design,
           br
           | develop &amp; maintain studio
-        p.wow.fadeIn(data-wow-delay="2s") We design, develop and maintain robust applications for mobile, web and desktop
-        a.button.wow.fadeIn(data-wow-delay="3s")
+        p.wow.fadeIn.slow(data-wow-delay="2s") We design, develop and maintain robust applications for mobile, web and desktop
+        a.button.wow.fadeIn.slow(data-wow-delay="3s")
           | Get a quote
           i.fas.fa-charging-station
     
