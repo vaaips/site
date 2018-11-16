@@ -16,15 +16,16 @@ header
 
 #home
   background: url('assets/home-bg.svg')
-  height: calc(100vh - 67px)
+  height: calc(100vh - (67px + 90px))
   background-repeat: no-repeat
-  background-position: center 70%
+  background-position: center bottom
   background-size: 70%
+  padding-top: 90px
+  margin-bottom: 95px
   
   h1
     font-size: 4em
     font-weight: 700
-    padding-top: 90px
     
   p
     font-size: 1.3em
@@ -53,12 +54,14 @@ header
       vertical-align: sub
 
 #about
-  height: 70vh
+  height: calc(100vh - 105px)
   text-align: center
   background: url('assets/about-bg.jpg')
   background-repeat: no-repeat
   background-position: center bottom
   background-size: 55%
+  padding-top: 90px
+  margin-bottom: 105px
   
   h1
     font-weight: 700
