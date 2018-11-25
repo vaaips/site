@@ -28,35 +28,36 @@ html(lang="en")
               
     section#home.wow.fadeIn.slow
       div.container
-        h1.wow.fadeIn.slow(data-wow-delay="1s")
+        h1.mt-5.mb-3.wow.fadeIn.slow(data-wow-delay="1s")
           | Software design,
           br
           | develop &amp; maintain studio
         p.wow.fadeIn.slow(data-wow-delay="2s") We design, develop and maintain robust applications for mobile, web and desktop
-        a.button.wow.fadeIn.slow(data-wow-delay="3s")
+        a.button.mt-5.wow.fadeIn.slow(data-wow-delay="3s")
           | Get a quote
           i.fas.fa-charging-station
+        img(src='./assets/home.svg')
 
     section#about.wow.fadeIn(data-wow-delay="1s")
-      div.container
+      div.container.text-center
         h1.title.wow.fadeIn.slow(data-wow-delay="2s") Who we are
-        p.desc.wow.fadeIn.slow(data-wow-delay="3s") We are a team of solution-agnostic thinkers, creative designers, and software developers, based out of Calicut, India. We design, develop and maintain robust and scalable cross-platform applications for mobile, web and desktop using the latest technologies.  
-    
+        p.wow.fadeIn.slow(data-wow-delay="3s") We are a team of solution-agnostic thinkers, creative designers, and software developers, based out of Calicut, India. We design, develop and maintain robust and scalable cross-platform applications for mobile, web and desktop using the latest technologies.  
+        img.mt-5.mw-100(src='./assets/about.jpg')
+
     section#team
       div.container
         .row.align-items-center
           .col.col-md-5
             h1.title Meet team
-            p.desc We are led by a small team who constantly questions, tinkers, and challenges to unlock great creativity and implement the robust solution on around every turn.
+            p We are led by a small team who constantly questions, tinkers, and challenges to unlock great creativity and implement the robust solution on around every turn.
           .col
-            .member
+            .member.text-center
               img(src="./assets/team-photo.png")
               h4.mt-3 Renjith
               p.m-0 Co-founder, Project Lead
               a(href="skype:renjith.v.k?chat") Skype
-
           .col
-            .member
+            .member.text-center
               img(src="./assets/team-photo.png")
               h4.mt-3 Rahul
               p.m-0 Co-founder, Team Lead
@@ -65,9 +66,9 @@ html(lang="en")
     section#services
       .container.text-center
         h1.title What we do
-        p.desc.text-center.mb-5 We are capable to plan, wireframe, design, develop, test, deploy and maintain software for web, mobile and desktop platforms using the latest technologies in affordable price
-        img(src='./assets/services-bg.png')
-        .row.platforms.text-center.mt-5
+        p.text-center.mb-5 We are capable to plan, wireframe, design, develop, test, deploy and maintain software for web, mobile and desktop platforms using the latest technologies in affordable price
+        img(src='./assets/services.png')
+        .row.text-center.mt-5
           .col
             h3 Web
           .col
@@ -80,14 +81,14 @@ html(lang="en")
         h1.title Get in touch
         .row
           .col.col-md-5
-            p.desc Do you have any queries? Feel free to say hello! We would be happy to answer you.
+            p Do you have any queries? Feel free to say hello! We would be happy to answer you.
             h4.mt-5 Vaaip Software Studio
             p
               | West Chathamangalam,
               br
               | Calicut, India - 673601
             p
-              a(href="") Direction
+              a(href="https://goo.gl/maps/Q3mupbeDH352") Direction
             p.email.mt-5
               a(href="mailto:hello@vaaip.com") hello@vaaip.com
             ul.social

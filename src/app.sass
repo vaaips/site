@@ -4,46 +4,48 @@
 
 body
   font-family: 'Anonymous Pro', monospace
+  font-size: 20.8px
+  color: #114b79
 
-a
-  color: #9fa9b2
-
-p, .active a, h1
-  color: #0d3c61 !important
-
-header
+h1, h2, h3, h4, h5, h6
   font-weight: 700
 
-  .nav-item
-    font-size: 1.06em
+a
+  color: inherit !important
+  text-decoration: none !important
+
+header
+  .nav-link
+    font-size: 0.9em
+    color: #114b79 !important
+    font-weight: normal
+
+  .active .nav-link
+    font-weight: 700
+
+section
+  height: 100vh
+  display: flex
+  align-items: center
+
+  .title
+    font-weight: 700
+    font-size: 2.5em
 
 #home
-  background: url('assets/home-bg.svg')
-  height: calc(100vh - (67px + 90px))
-  background-repeat: no-repeat
-  background-position: center bottom
-  background-size: 70%
-  margin-top: 67px
-  padding-top: 80px
-  margin-bottom: calc(90px + 5px)
+  img
+    max-width: 100%
   
   h1
-    font-size: 4em
-    font-weight: 700
-    
-  p
-    font-size: 1.3em
-    color: #114b79
-    margin-top: 20px
+    font-size: 3.12em
 
   .button
     color: #fff !important
     padding: 14px 26px
     border-radius: 5px
     box-shadow: 4px 4px 10px #2296f369
-    margin-top: 65px
     display: inline-block
-    font-size: 1.2em
+    font-size: 0.923em
     font-weight: 700
     background: #23b9ff
     background: -moz-linear-gradient(45deg, #23b9ff 0%, #2296f3 100%)
@@ -57,64 +59,18 @@ header
       margin-left: 13px
       vertical-align: sub
 
-section
-  .title
-    font-weight: 700
-    font-size: 3.5em
-
-  .desc
-    font-size: 1.3em
-    color: #114b79
-
-#about
-  height: calc(100vh - 105px)
-  text-align: center
-  background: url('assets/about-bg.jpg')
-  background-repeat: no-repeat
-  background-position: center bottom
-  background-size: 55%
-  padding-top: 90px
-  margin-bottom: 105px
-
 #team
-  height: 100vh
-  display: flex
-  align-items: center
-  
   .member
-    text-align: center
-    font-size: 18px
-
-    h4
-      font-weight: 700
+    font-size: 0.9em
 
     img
-      width: 200px
+      max-width: 200px
 
 #services
-  height: 100vh
-
   img
-    width: 30vw
-
-  .platforms
-    h3
-      font-weight: 700
+    max-width: 50%
 
 #contact
-  height: 100vh
-  display: flex
-  align-items: center
-  font-size: 21px
-
-  .title
-    font-size: 2.66em
-  .desc
-    font-size: 1em
-
-  h4
-    font-weight: 700
-  
   .email
     font-size: 1.4em
 
