@@ -20,11 +20,11 @@ html(lang="en")
             li.nav-item
               a.nav-link(href='#about') About
             li.nav-item
-              a.nav-link(href='#') Team
+              a.nav-link(href='#team') Team
             li.nav-item
-              a.nav-link(href='#') Services
+              a.nav-link(href='#services') Services
             li.nav-item
-              a.nav-link(href='#') Contact
+              a.nav-link(href='#contact') Contact
               
     section#home.wow.fadeIn.slow
       div.container
@@ -39,7 +39,27 @@ html(lang="en")
 
     section#about.wow.fadeIn(data-wow-delay="1s")
       div.container
-        h1.wow.fadeIn.slow(data-wow-delay="2s") About
-        p.wow.fadeIn.slow(data-wow-delay="3s") We are a team of solution-agnostic thinkers, creative designers, and software developers. We design, develop and maintain robust and scalable cross-platform applications for mobile, web and desktop using the latest technologies.  
+        h1.title.wow.fadeIn.slow(data-wow-delay="2s") Who we are
+        p.desc.wow.fadeIn.slow(data-wow-delay="3s") We are a team of solution-agnostic thinkers, creative designers, and software developers, based out of Calicut, India. We design, develop and maintain robust and scalable cross-platform applications for mobile, web and desktop using the latest technologies.  
     
+    section#team
+      div.container
+        .row.align-items-center
+          .col.col-md-5
+            h1.title Meet team
+            p.desc We are led by a small team who constantly questions, tinkers, and challenges to unlock great creativity and implement the robust solution on around every turn.
+          .col
+            .member
+              img(src="./assets/team-photo.png")
+              h4.mt-3 Renjith
+              p.m-0 Co-founder, Project Lead
+              a(href="skype:renjith.v.k?chat") Skype
+
+          .col
+            .member
+              img(src="./assets/team-photo.png")
+              h4.mt-3 Rahul
+              p.m-0 Co-founder, Team Lead
+              a(href="skype:live:rahultp518?chat") Skype
+
     script(src="app.js")
