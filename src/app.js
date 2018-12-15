@@ -13,8 +13,21 @@ anchorScroll.init({
 new wow.WOW().init()
 
 $(function() {
-  $(document).on('click', '.nav-item', function() {
-    $(".nav-item").removeClass("active");
-    $(this).addClass("active");
-  });
+  var sections = $('section')
+  var nav = $('.nav-item')
+  var navHeight = nav.outerHeight()
+
+  $(window).on('scroll', function () {
+    var currentPosition = $(this).scrollTop()
+    
+    sections.each(function() {
+      var top = $(this).offset().top - navHeight
+      var bottom = top + $(this).outerHeight()
+
+      if (currentPosition >= top && currentPosition <= bottom) {
+        $('.nav-item').removeClass('active')
+        nav.find('a[href="#'+$(this).attr('id')+'"]').parent().addClass('active')
+      }
+    })
+  })
 })
