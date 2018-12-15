@@ -1,5 +1,6 @@
 import 'bootstrap'
 import 'animate.css'
+import $ from 'jquery'
 const wow = require('wowjs')
 const anchorScroll = require("anchor-scroll")
 
@@ -10,3 +11,10 @@ anchorScroll.init({
 })
 
 new wow.WOW().init()
+
+$(function() {
+  $(document).on('click', '.nav-item', function() {
+    $(".nav-item").removeClass("active");
+    $(this).addClass("active");
+  });
+})
