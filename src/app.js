@@ -10,7 +10,9 @@ anchorScroll.init({
   duration: 1000
 })
 
-new wow.WOW().init()
+new wow.WOW({
+  offset: window.innerHeight / 2
+}).init()
 
 $(function() {
   var sections = $('section')
