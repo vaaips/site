@@ -21,26 +21,30 @@ a
   text-decoration: none !important
 
 .button
-    color: #fff !important
-    padding: 14px 26px
-    border-radius: 5px
-    box-shadow: 4px 4px 10px #2296f369
-    display: inline-block
-    font-size: 0.923em
-    font-weight: 700
-    background: #23b9ff
-    background: -moz-linear-gradient(45deg, #23b9ff 0%, #2296f3 100%)
-    background: -webkit-linear-gradient(45deg, #23b9ff 0%,#2296f3 100%)
-    background: linear-gradient(45deg, #23b9ff 0%,#2296f3 100%)
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23b9ff', endColorstr='#2296f3',GradientType=1 )
-    cursor: pointer
+  color: #fff !important
+  padding: 14px 26px
+  border-radius: 5px
+  box-shadow: 4px 4px 10px #2296f369
+  display: inline-block
+  font-size: 0.923em
+  font-weight: 700
+  background: #23b9ff
+  background: -moz-linear-gradient(45deg, #23b9ff 0%, #2296f3 100%)
+  background: -webkit-linear-gradient(45deg, #23b9ff 0%,#2296f3 100%)
+  background: linear-gradient(45deg, #23b9ff 0%,#2296f3 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23b9ff', endColorstr='#2296f3',GradientType=1 )
+  cursor: pointer
+  outline: none !important
+  border: none !important
 
-    i
-      font-size: 1.4em
-      margin-left: 13px
-      vertical-align: sub
+  i
+    font-size: 1.4em
+    margin-left: 13px
+    vertical-align: sub
 
 header
+  padding-right: 0 !important
+
   img
     height: 41px
     
@@ -103,3 +107,34 @@ section
 
   .cover img
     max-width: 100%
+
+.modal
+  .active
+    font-weight: 700
+    color: #495057
+  
+  ul
+    margin: 0
+    padding: 0 12px
+    border-radius: 0.25rem
+    list-style: none
+    color: #495057d6
+    font-size: 16px
+    height: calc(2.25rem + 2px)
+
+    li
+      cursor: pointer
+  
+  textarea
+    resize: none
+  
+  .custom-file-label::after
+    display: none
+  
+  .custom-file-label
+    color: #495057d6
+    font-size: 16px
+  
+.modal-open
+  overflow: visible
+  padding-right:0px!important
