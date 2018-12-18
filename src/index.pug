@@ -51,23 +51,25 @@ html(lang="en")
     section#team.wow.fadeIn
       div.container
         .row.align-items-center
-          .col.col-md-5
+          .col-md-5
             h1.title Meet team
             p We are led by a small team who constantly questions, tinkers, and challenges to unlock great creativity and implement the robust solution on around every turn.
-          .col
-            .member.text-center
-              img(src="./assets/renjith.svg")
-              h4.mt-3 Renjith
-              p.mb-2 DevOps Engineer, Project Lead
-              a(href="skype:renjith.v.k?chat")
-                i.fab.fa-skype.fa-lg
-          .col
-            .member.text-center
-              img(src="./assets/rahul.svg")
-              h4.mt-3 Rahul
-              p.mb-2 DevOps Engineer, Team Lead
-              a(href="skype:live:rahultp518?chat")
-                i.fab.fa-skype.fa-lg
+          .col-md-7
+            .row
+              .col-md-6.col-sm-12
+                .member.text-center
+                  img(src="./assets/renjith.svg")
+                  h4.mt-3 Renjith
+                  p.mb-2 DevOps Engineer, Project Lead
+                  a(href="skype:renjith.v.k?chat")
+                    i.fab.fa-skype.fa-lg
+              .col-md-6.col-sm-12
+                .member.text-center
+                  img(src="./assets/rahul.svg")
+                  h4.mt-3 Rahul
+                  p.mb-2 DevOps Engineer, Team Lead
+                  a(href="skype:live:rahultp518?chat")
+                    i.fab.fa-skype.fa-lg
 
     section#services.wow.fadeIn
       .container.text-center
@@ -95,7 +97,7 @@ html(lang="en")
       .container
         h1.title Get in touch
         .row
-          .col.col-md-5
+          .col-md-5
             p Do you have any queries? Feel free to say hello! We would be happy to answer you.
             div
               h4.mt-5 Vaaip Software Studio
@@ -123,7 +125,7 @@ html(lang="en")
               li
                 a(href="skype:renjith.v.k?chat")
                   i.fab.fa-skype
-          .col.cover
+          .col-md-7.cover
             img(src='./assets/contact.svg')
     
     .modal.fade(role='dialog' id="form")
