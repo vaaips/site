@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const _ = require('lodash')
 
 const apiServer = app => {
-  app.use(bodyParser.json())
+  app.use(bodyParser.json({limit: '1mb'}))
   
   app.post('/api/get-quote', (req, res) => {
     const data = req.body
