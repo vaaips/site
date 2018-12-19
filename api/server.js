@@ -22,7 +22,6 @@ const apiServer = app => {
       const error = _.head(validate.error.details).message
       return res.status(422).json(error)
     }
-    return res.json(true)
 
     const client = new SparkPost(process.env.SPARKPOST_API_KEY)
     const content = {
