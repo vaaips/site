@@ -1,9 +1,10 @@
 const express = require('express')
+require('dotenv').config()
 const apiServer = require('./api/server')
 const clientServer = require('./client/server')
 
 const app = express()
-const port = 8000
+const port = process.env.SERVER_PORT
 
 apiServer(app)
 clientServer(app)
