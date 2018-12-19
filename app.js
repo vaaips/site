@@ -1,8 +1,11 @@
-const path = require('path')
 const express = require('express')
+const apiServer = require('./api/server')
+const clientServer = require('./client/server')
+
 const app = express()
+const port = 8000
 
-const clientBuild = path.join(__dirname, './client/dist')
-app.use(express.static(clientBuild))
+apiServer(app)
+clientServer(app)
 
-app.listen(80, () => console.log('Serving on port 80'))
+app.listen(port, () => console.log(`Serving on port ${port}`))
