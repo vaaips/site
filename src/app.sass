@@ -112,13 +112,22 @@ section
     max-width: 100%
 
 .modal
-  .active
-    font-weight: 700
-    color: #114b79
+  font-size: 0.75em
+  color: #114b79
+
+  .form-control
+    font-size: 1em
+    box-shadow: none !important
+    border-color: #ccc !important
 
   .platforms
     cursor: pointer
-    color: #495057
+    color: #666
+    font-size: 0.9em
+
+    .active
+      font-weight: 700
+      color: #2196F3
 
   textarea
     resize: none
@@ -128,8 +137,7 @@ section
   
   .custom-file-label
     color: #495057d6
-    font-size: 16px
   
 .modal-open
   overflow: visible
-  padding-right:0px!important
+  padding-right: 0 !important

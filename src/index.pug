@@ -130,18 +130,18 @@ html(lang="en")
     
     .modal.fade(role='dialog' id="form")
       .modal-dialog(role='document')
-        .modal-content
-          .modal-body
-            .platforms.form-row.mb-2
+        .modal-content.border-0
+          .modal-body.p-5
+            .platforms.form-row.mb-4
               .col.d-flex.flex-column.align-items-center(data-target="web")
                 i.fas.fa-globe-asia.fa-2x
-                p Web apps
+                p.mt-2 Web app
               .col.d-flex.flex-column.align-items-center(data-target="mobile")
                 i.fas.fa-mobile-alt.fa-2x
-                p Mobile apps
+                p.mt-2 Mobile app
               .col.d-flex.flex-column.align-items-center(data-target="desktop")
                 i.fas.fa-desktop.fa-2x
-                p Desktop apps
+                p.mt-2 Desktop app
             .form-row.mb-2
               .col
                 input.form-control(type="text" placeholder="Name")
