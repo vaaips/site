@@ -9,9 +9,12 @@ const apiServer = app => {
   app.post('/api/get-quote', (req, res) => {
     const data = req.body
     const schema = {
+      platforms: Joi.array().allow([]),
       name: Joi.string().required(),
       email: Joi.string().email().required(),
-      message: Joi.string().required()
+      message: Joi.string().required(),
+      budget: Joi.string().allow(''),
+      attachment: Joi.object().allow({})
     }
 
     const validate = Joi.validate(data, schema)
