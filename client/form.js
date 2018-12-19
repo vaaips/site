@@ -1,5 +1,6 @@
 import $ from 'jquery'
 import _ from 'lodash'
+import axios from 'axios'
 
 const getQuoteForm = {
   data: {
@@ -33,27 +34,42 @@ const getQuoteForm = {
     self.data.message = $('[name=message]').val()
     self.data.budget = $('[name=budget]').val()
 
-    const files = $('[name=attachment]').prop('files')
-    if (files.length) {
-      var fileReader = new FileReader()
-      fileReader.onload = function() {
-        self.data.attachment = fileReader.result
-      }
-      fileReader.readAsDataURL(files[0])
-    }
-
     return this.data
+  },
+
+  onAttachmentChange() {
+    const self = this
+    $('[name=attachment]').change(function() {
+      const files = $(this).prop('files')
+      if (files.length) {
+        var fileReader = new FileReader()
+        fileReader.onload = function() {
+          self.data.attachment = fileReader.result
+        }
+        fileReader.readAsDataURL(files[0])
+      }
+    })
   },
 
   onSubmit() {
     const self = this
     $('.modal button').click(function() {
-      console.log(self.collect())
+      axios.post('/api/get-quote', self.collect())
+      .then(function (response) {
+        $('.form-wrapper').css('display', 'none')
+        $('.success-alert').css('display', 'block')
+        $('.success-alert').text('Thank you.')
+      })
+      .catch(function (error) {
+        $('.error-alert').css('display', 'block')
+        $('.error-alert').text(error.response.data)
+      })
     })
   },
 
   init() {
     this.onTogglePlatform()
+    this.onAttachmentChange()
     this.onSubmit()
   }
 }
