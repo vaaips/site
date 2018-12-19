@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serve:client": "parcel serve client/index.pug --out-dir client/dist --cache-dir client/.cache",
+    "serve:api": "nodemon api/server.js",
     "start": "parcel build client/index.pug --out-dir client/dist --cache-dir client/.cache && pm2 start app.js"
   },
   "keywords": [],
