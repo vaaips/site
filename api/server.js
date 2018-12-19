@@ -39,7 +39,7 @@ const apiServer = app => {
           </body>
         </html>`
     }
-    if (data.attachment) content.attachments = data.attachment
+    if (data.attachment) content.attachments = [data.attachment]
 
     const send = client.transmissions.send({
       content,
