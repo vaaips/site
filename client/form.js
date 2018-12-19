@@ -9,7 +9,7 @@ const getQuoteForm = {
     email: '',
     message: '',
     budget: '',
-    attachment: ''
+    attachment: {}
   },
 
   onTogglePlatform() {
@@ -33,7 +33,6 @@ const getQuoteForm = {
     self.data.email = $('[name=email]').val()
     self.data.message = $('[name=message]').val()
     self.data.budget = $('[name=budget]').val()
-
     return this.data
   },
 
@@ -41,12 +40,18 @@ const getQuoteForm = {
     const self = this
     $('[name=attachment]').change(function() {
       const files = $(this).prop('files')
-      if (files.length) {
-        var fileReader = new FileReader()
+      if (files.length ) {
+        const fileReader = new FileReader()
+        const file = files[0]
+
         fileReader.onload = function() {
-          self.data.attachment = fileReader.result
+          self.data.attachment = {
+            data: fileReader.result,
+            name: file.name,
+            type: file.type
+          }
         }
-        fileReader.readAsDataURL(files[0])
+        fileReader.readAsDataURL(file)
       }
     })
   },
@@ -58,7 +63,7 @@ const getQuoteForm = {
       .then(function (response) {
         $('.form-wrapper').css('display', 'none')
         $('.success-alert').css('display', 'block')
-        $('.success-alert').text('Thank you.')
+        $('.success-alert').text(response.data)
       })
       .catch(function (error) {
         $('.error-alert').css('display', 'block')
