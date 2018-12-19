@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const _ = require('lodash')
 
 const apiServer = app => {
-  app.use(bodyParser.urlencoded({ extended: false }))
+  app.use(bodyParser.json())
   
   app.post('/api/get-quote', (req, res) => {
     const data = req.body
