@@ -3,6 +3,7 @@ import 'animate.css'
 import $ from 'jquery'
 const wow = require('wowjs')
 const anchorScroll = require("anchor-scroll")
+import form from './form'
 
 anchorScroll.init({
   updateUrl: false,
@@ -14,7 +15,7 @@ new wow.WOW({
   offset: window.innerHeight / 2
 }).init()
 
-$(function() {
+function activateNavLinksWhenScroll() {
   var sections = $('section')
   var nav = $('.nav-item')
   var navHeight = nav.outerHeight()
@@ -32,13 +33,9 @@ $(function() {
       }
     })
   })
+}
 
-  $('[data-target]').click(function() {
-    if($(this).hasClass( "active" )) {
-      $(this).removeClass('active')
-    }
-    else {
-      $(this).addClass('active')
-    }
-  })
+$(function() {
+  activateNavLinksWhenScroll()
+  form.getQuoteForm.init()
 })

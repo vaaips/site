@@ -133,31 +133,31 @@ html(lang="en")
         .modal-content.border-0
           .modal-body.p-5
             .platforms.form-row.mb-4
-              .col.d-flex.flex-column.align-items-center(data-target="web")
+              .col.d-flex.flex-column.align-items-center(platform="web")
                 i.fas.fa-globe-asia.fa-2x
                 p.mt-2 Web app
-              .col.d-flex.flex-column.align-items-center(data-target="mobile")
+              .col.d-flex.flex-column.align-items-center(platform="mobile")
                 i.fas.fa-mobile-alt.fa-2x
                 p.mt-2 Mobile app
-              .col.d-flex.flex-column.align-items-center(data-target="desktop")
+              .col.d-flex.flex-column.align-items-center(platform="desktop")
                 i.fas.fa-desktop.fa-2x
                 p.mt-2 Desktop app
             .form-row.mb-2
               .col
-                input.form-control(type="text" placeholder="Name")
+                input.form-control(type="text" name="name" placeholder="Name")
               .col
-                input.form-control(type="email" placeholder="Email")
+                input.form-control(type="email" name="email" placeholder="Email")
             .form-row.mb-2
               .col
-                textarea.form-control(placeholder="About your project..." rows="3")
+                textarea.form-control(name="message" placeholder="About your project..." rows="3")
             .form-row
               .col
-                input.form-control(type="number" placeholder="Budget")
+                input.form-control(type="number" name="budget" placeholder="Budget")
               .col
                 .input-group.mb-3
                   .custom-file
-                    input#file-upload.custom-file-input(type='file')
-                    label.custom-file-label(for='file-upload') Attachments
+                    input#file-upload.custom-file-input(type='file' name="attachment")
+                    label.custom-file-label(for='file-upload') Attachment
                   .input-group-append
                     .input-group-text
                       i.fas.fa-file-upload
