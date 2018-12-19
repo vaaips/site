@@ -34,12 +34,12 @@ const apiServer = app => {
             <p>
               ${data.message}<br>
               Budget: ${data.budget}<br>
-              Platforms: data.platforms
+              Platforms: ${data.platforms}
             </p>
           </body>
         </html>`
     }
-    if (data.attachment) content.attachments = [data.attachment]
+    if (!_.isEmpty(data.attachment)) content.attachments = [data.attachment]
 
     const send = client.transmissions.send({
       content,
