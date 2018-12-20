@@ -47,9 +47,12 @@ const apiServer = app => {
 
     const send = client.transmissions.send({
       content,
-      recipients: [
-        { address: process.env.TO_EMAIL }
-      ]
+      recipients: [{
+        address: {
+          name: 'Vaaip Software Studio',
+          email: process.env.TO_EMAIL
+        } 
+      }]
     })
     
     send.then(data => res.json('Thanks! We\'ll get back to you soon'))
