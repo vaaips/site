@@ -59,17 +59,32 @@ const getQuoteForm = {
   onSubmit() {
     const self = this
     $('.modal button').click(function() {
+      self.alertController.clearAll()
+
       axios.post('/api/get-quote', self.collect())
-      .then(function (response) {
-        $('.form-wrapper').css('display', 'none')
-        $('.success-alert').css('display', 'block')
-        $('.success-alert').text(response.data)
-      })
-      .catch(function (error) {
-        $('.error-alert').css('display', 'block')
-        $('.error-alert').text(error.response.data)
-      })
+        .then(response => self.alertController.success(response.data))
+        .catch(error => self.alertController.error(error.response.data))
     })
+  },
+
+  alertController: {
+    clearAll() {
+      $('.modal .alert').removeClass('alert-danger')
+      $('.modal .alert').removeClass('alert-success')
+    },
+
+    error(message) {
+      $('.modal .alert').addClass('alert-danger')
+      $('.modal .alert').removeClass('alert-success')
+      $('.modal .alert').text(message)
+    },
+
+    success(message) {
+      $('.modal .alert').addClass('alert-success mb-0')
+      $('.modal .alert').removeClass('alert-danger')
+      $('.modal .alert').text(message)
+      $('.form-wrapper').css('display', 'none')
+    }
   },
 
   init() {

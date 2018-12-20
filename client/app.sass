@@ -115,16 +115,13 @@ section
   font-size: 0.75em
   color: #114b79
 
-  .success-alert
-    display: none
-    margin-bottom: 0
+  .alert
+    visibility: hidden
     border: none
-    padding: 10px 20px
+    padding: 10px
 
-  .error-alert
-    display: none
-    border: none
-    padding: 10px 20px
+    &.alert-success, &.alert-danger
+      visibility: visible
 
   .form-control
     font-size: 1em
