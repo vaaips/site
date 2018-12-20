@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "serve": "concurrently 'parcel serve client/index.pug --out-dir client/dist --cache-dir client/.cache' 'nodemon app.js'",
-    "start": "parcel build client/index.pug --out-dir client/dist --cache-dir client/.cache && pm2 start app.js"
+    "start": "parcel build client/index.pug --out-dir client/dist --cache-dir client/.cache && pm2 start app.js",
+    "pack": "chmod +x packager.sh && ./packager.sh"
   },
   "keywords": [],
   "author": "vaaip",
