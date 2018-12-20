@@ -4,7 +4,7 @@ const _ = require('lodash')
 const SparkPost = require('sparkpost')
 
 const apiServer = app => {
-  app.use(bodyParser.json({limit: '1mb'}))
+  app.use(bodyParser.json({limit: '10mb'}))
   
   app.post('/api/get-quote', (req, res) => {
     const data = req.body
