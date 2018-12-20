@@ -25,8 +25,12 @@ const apiServer = app => {
 
     const client = new SparkPost(process.env.SPARKPOST_API_KEY)
     const content = {
-      from: process.env.FROM_EMAIL,
-      subject: `Quote Request from ${data.name} - Vaaip`,
+      from: {
+        name: data.name,
+        email: process.env.FROM_EMAIL
+      },
+      reply_to: data.email,
+      subject: `Quotation Request - Vaaip`,
       html: `
         <html>
           <body>
