@@ -49,7 +49,7 @@ const apiServer = app => {
     })
     
     send.then(data => res.json('Thanks! We\'ll get back to you soon'))
-      .catch(error => res.status(403).json('Whoops! Something went wrong'))
+      .catch(error => res.status(403).json(`Whoops! Something went wrong! ${ data.attachment.name ? 'Might be the attachment size more than 10MB' : '' }`))
   })
 }
 
