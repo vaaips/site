@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo Cleanig up 🚿
 rm -rf package
 mkdir package
