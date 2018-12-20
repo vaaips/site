@@ -46,7 +46,7 @@ const getQuoteForm = {
 
         fileReader.onload = function() {
           self.data.attachment = {
-            data: fileReader.result,
+            data: fileReader.result.split(',')[1],
             name: file.name,
             type: file.type
           }
