@@ -1,12 +1,8 @@
 const express = require('express')
-require('dotenv').config()
-const apiServer = require('./api/server')
-const clientServer = require('./client/server')
 
 const app = express()
 const port = process.env.SERVER_PORT
+const publicPath = path.join(__dirname, './dist')
 
-apiServer(app)
-clientServer(app)
-
+app.use(express.static(publicPath))
 app.listen(port, () => console.log(`Serving on port ${port}`))
