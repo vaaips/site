@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serve": "parcel serve src/index.pug",
-    "start": "parcel build client/index.pug && pm2 start app.js"
+    "start": "parcel build src/index.pug && pm2 start --node-args '-r dotenv/config' app.js"
   },
   "keywords": [],
   "author": "vaaip",
@@ -20,6 +20,7 @@
     "anchor-scroll": "^2.0.0",
     "animate.css": "^3.7.2",
     "bootstrap": "^4.3.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0",
