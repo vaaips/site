@@ -36,5 +36,4 @@ function activateNavLinksWhenScroll() {
 
 $(function() {
   activateNavLinksWhenScroll()
-  form.getQuoteForm.init()
 })
