@@ -6,8 +6,8 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Vaaip - Software Design, Develop &amp; Maintain Studio
     link(rel="icon", href="favicon.ico")
-    link(rel="stylesheet", href="app.sass")
-    link(rel="stylesheet", href="resp.sass")
+    link(rel="stylesheet", href="./app.sass")
+    link(rel="stylesheet", href="./resp.sass")
   body
     header.fixed-top.bg-white.wow.fadeIn
       nav.navbar.navbar-expand-lg.navbar-light.container
@@ -37,7 +37,7 @@ html(lang="en")
           br
           | develop &amp; maintain studio
         p We design, develop and maintain robust applications for mobile, web and desktop
-        a.button.mt-5(data-toggle="modal" data-target="#form")
+        a.button.mt-5
           | Get a quote
           i.fas.fa-charging-station
         img(src='./assets/home.svg')
@@ -129,46 +129,5 @@ html(lang="en")
                   i.fab.fa-skype
           .col-md-7.cover
             img(src='./assets/contact.svg')
-    
-    .modal.fade(role='dialog' id="form")
-      .modal-dialog(role='document')
-        .modal-content.border-0
-          .modal-body.p-5
-            .alert.text-center(role="alert") Alert placeholder
-            .form-wrapper
-              .platforms.form-row.mb-4
-                .col.d-flex.flex-column.align-items-center(platform="web")
-                  i.fas.fa-globe-asia.fa-2x
-                  p.mt-2 Web app
-                .col.d-flex.flex-column.align-items-center(platform="mobile")
-                  i.fas.fa-mobile-alt.fa-2x
-                  p.mt-2 Mobile app
-                .col.d-flex.flex-column.align-items-center(platform="desktop")
-                  i.fas.fa-desktop.fa-2x
-                  p.mt-2 Desktop app
-              .form-row.mb-2
-                .col
-                  input.form-control(type="text" name="name" placeholder="Name")
-                .col
-                  input.form-control(type="email" name="email" placeholder="Email")
-              .form-row.mb-2
-                .col
-                  textarea.form-control(name="message" placeholder="About your project..." rows="3")
-              .form-row
-                .col
-                  input.form-control(type="text" name="budget" placeholder="Budget")
-                .col
-                  .input-group.mb-3
-                    .custom-file
-                      input#file-upload.custom-file-input(type='file' name="attachment")
-                      label.custom-file-label(for='file-upload') Attachment
-                    .input-group-append
-                      .input-group-text
-                        i.fas.fa-file-upload
-              .row
-                .col.d-flex.justify-content-center
-                  button.button
-                    | Get quote
-                    i.fas.fa-paper-plane.ml-2
 
     script(src="app.js")

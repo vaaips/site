@@ -3,7 +3,6 @@ import 'animate.css'
 import $ from 'jquery'
 const wow = require('wowjs')
 const anchorScroll = require("anchor-scroll")
-import form from './form'
 
 anchorScroll.init({
   updateUrl: false,
